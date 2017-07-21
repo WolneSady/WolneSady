@@ -8,7 +8,7 @@ admin.initializeApp(functions.config().firebase);
 var cors = require('cors');
 
 var corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: ['https://wolnesady.github.io', 'http://wolnesady.pl', 'http://wolnesądy.pl', 'http://chcemyweta.pl'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
