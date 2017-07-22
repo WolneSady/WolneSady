@@ -21,9 +21,15 @@ var upvoteVetoFn = functions.https.onRequest((req, res) => {
         fingerPrintId = req.headers.authorization.split('Bearer ')[1];
 
         // Push the new message into the Realtime Database using the Firebase Admin SDK.
-        admin.database().ref('/upvotes/fingerprints/' + fingerPrintId).set({fingerPrintId}).then(snapshot => {
-            res.status(200).send({status: "OK"});
-        });
+        let fingerprint_ref = admin.database().ref('/upvotes/fingerprints/' + fingerPrintId);
+        if (fingerprint_ref.exists()) {
+            fingerprint_ref.set({fingerPrintId}).then(snapshot => {
+                res.status(200).send({status: "Głos dodany"});
+            });
+        } else {
+            res.status(200).send({status: "Możesz zagłosować tylko raz."});
+        }
+
     } else {
         res.status(403).send('Unauthorized');
     }

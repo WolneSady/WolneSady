@@ -55,6 +55,7 @@ div#intro {
     font-size: 36px !important;
     color: rgb(242, 162, 63);
     text-align: center;
+    margin: 4px 16px 24px;
 }
 
 @media screen and (max-width: 720px) {
@@ -64,10 +65,10 @@ div#intro {
 }
 
 .banner-count {
-    font-size: 64px !important;
+    font-size: 48px !important;
     color: white;
     text-align: center;
-    margin: 16px;
+    margin: 8px;
 }
 
 .banner-h1 {
@@ -128,11 +129,23 @@ img.bg {
 .white-border {
     border: thin solid white;
     margin: 0;
-    padding: 8px;
 }
 
-.itallic {
-    font-size: 24px;
+.italic {
+    font-size: 20px;
     line-height: 30px;
     font-style: italic;
+}
+
+#vote-section {
+    padding-bottom: 24px;
+}
+
+#count-section {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#share-section {
+    margin-bottom: 16px;
 }

@@ -43,9 +43,9 @@ function DEPLOY {
 }
 
 if [ "$target" = "production" ]; then
-  DEPLOY "wolnesądy.pl" "git@github.com:WolneWybory/wolne_sady_landing.git" "http://wolnesądy.pl"
+  DEPLOY "wolnesady.pl" "git@github.com-WolneSady:WolneSady/wolne_sady_landing.git" "http://wolnesady.pl"
 fi
 if [ "$target" = "preview" ]; then
-  DEPLOY "preview.wolnesądy.pl" "git@github.com:WolneWybory/wolne_sady_preview.git" "http://preview.wolnesądy.pl/"
+  DEPLOY "preview.wolnesądy.pl" "git@github.com-WolneSady/wolne_sady_preview.git" "http://preview.wolnesądy.pl/"
 fi
 echo "Target invalid, add argument 'production' or 'preview'"

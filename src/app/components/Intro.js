@@ -17,21 +17,24 @@ class Intro extends Component {
         };
     }
 
-
     handleEstimateTap = () => {
         this.setState({showLoader: true});
+
         setTimeout(function () {
-            this.setState({showAnswer: true, showLoader: false});
+            this.setState({
+                showAnswer: true,
+                showLoader: false
+            });
         }.bind(this), 1500);
     };
 
     render() {
-        let loader;
+        let answer;
         if (this.state.showLoader) {
-            loader = <CircularProgress id="progress" size={60} thickness={6}
+            answer = <CircularProgress id="progress" size={60} thickness={6}
                                        className="indicator"/>
         } else if (!this.state.showAnswer) {
-            loader = <RaisedButton className="banner-button"
+            answer = <RaisedButton className="banner-button"
                                    fullWidth={true}
                                    style={{
                                        height: '100%',
@@ -43,11 +46,13 @@ class Intro extends Component {
                                    }}
                                    onTouchTap={this.handleEstimateTap}
                                    label="SPRAWDŹ" primary={true}/>
+        } else {
+            answer = <h1 className="call-quote">JESZCZE TAK!</h1>
         }
 
-        let answer;
+        let info;
         if (this.state.showAnswer) {
-            answer = <StillOk/>;
+            info = <StillOk/>;
         }
 
         return (
@@ -59,13 +64,15 @@ class Intro extends Component {
                         <Paper className="banner-main center banner-main-apla" zDepth={3}>
                             <Row middle="xs">
                                 <Col xs={12} xsOffset={0} sm={10} smOffset={1} md={8} mdOffset={2}>
-                                    <h1 className="banner-h1">Czy w Polsce mamy Wolne Sądy?</h1>
-                                    {loader}
+                                    <h1 className={this.state.showAnswer ? "banner-h2" : "banner-h1"}>
+                                        Czy w Polsce mamy Wolne Sądy?
+                                    </h1>
+                                    {answer}
                                 </Col>
                             </Row>
                             <Row>
                                 <Col xs={12} xsOffset={0} sm={10} smOffset={1} md={8} mdOffset={2}>
-                                    {answer}
+                                    {info}
                                 </Col>
                             </Row>
 
