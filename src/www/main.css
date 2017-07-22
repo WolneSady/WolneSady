@@ -45,47 +45,53 @@ div#intro {
 }
 
 .banner-main-apla {
-    padding: 24px;
+    padding: 16px;
     background-color: rgba(44, 45, 45, 0.5);
-    line-height: 40px;
+    line-height: 36px;
     height: auto;
 }
 
 .call-quote {
-    font-size: 42px !important;
+    font-size: 36px !important;
     color: rgb(242, 162, 63);
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.banner-count {
-    font-size: 76px !important;
-    color: white;
     text-align: center;
 }
 
 @media screen and (max-width: 720px) {
     .banner-count {
-        font-size: 56px !important;
+        font-size: 48px !important;
     }
 }
 
-.banner-h1 {
-    font-size: 42px !important;
+.banner-count {
+    font-size: 64px !important;
     color: white;
+    text-align: center;
+    margin: 16px;
+}
+
+.banner-h1 {
+    font-size: 36px !important;
+    color: white;
+    margin: 16px;
     text-align: center;
 }
 
 .banner-h2 {
-    font-size: 32px !important;
+    font-size: 28px !important;
     color: white;
+    margin: 8px;
+    text-align: center;
+}
+
+.banner-h3 {
+    font-size: 16px !important;
+    color: white;
+    margin: 8px;
     text-align: center;
 }
 
 .banner-button {
-    background-color: #ff0000;
-    text-align: center;
-    margin: 0 auto;
 }
 
 img.bg {
@@ -112,7 +118,7 @@ img.bg {
 }
 
 .icon-padding {
-    padding: 0 16px !important;
+    padding: 0 8px !important;
 }
 
 .extra-small-margin {
@@ -122,7 +128,7 @@ img.bg {
 .white-border {
     border: thin solid white;
     margin: 0;
-    padding: 16px;
+    padding: 8px;
 }
 
 .itallic {

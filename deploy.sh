@@ -35,8 +35,8 @@ function DEPLOY {
   cd release/production
 
   # Prepare CNAME
-#  rm -f CNAME
-#  echo $domain > CNAME
+  rm -f CNAME
+  echo $domain > CNAME
 
   PUSH_TO_GH_PAGES $remote
   exit

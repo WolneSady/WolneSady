@@ -87,12 +87,12 @@ class StillOk extends Component {
         } else if (!this.state.showAnswer) {
             countSection = <div className="white-border">
                 <Row center="xs" middle="xs">
-                    <h1 className="banner-count"><NumericLable
+                    <h2 className="banner-count"><NumericLable
                         params={countOptions}>{this.state.upvoteCount}</NumericLable>
-                    </h1>
+                    </h2>
                     <FontIcon className="fa fa-users icon-padding banner-count"/>
                 </Row>
-                <h1>Tyle głosów domaga się WETA Prezydenta!</h1>
+                <h1 className="banner-h2">Tyle głosów domaga się WETA Prezydenta!</h1>
             </div>
         }
 
@@ -107,7 +107,7 @@ class StillOk extends Component {
                                         }}
                                         labelStyle={{
                                             margin: '8px',
-                                            fontSize: '55px'
+                                            fontSize: '48px'
                                         }}
                                         label="CHCĘ WETA"
                                         secondary={true}/>
@@ -123,16 +123,15 @@ class StillOk extends Component {
                 <p/><p/>
                 {countSection}
 
-                <h3 className="banner-h3">Chcesz zostać poinformowany, gdy nie będzie już w Polsce wolnych sądów?</h3>
-                <Row center="xs" middle="xs">
-                    <TextField hintText="Zostaw swój email"/>
-                    <FlatButton backgroundColor="#FFF"
-                                hoverColor="#ccc"
-
-                                className="banner-button extra-small-margin"
-                                onTouchTap={this.handleSubscribe}
-                                label="Dopisz się" primary={true}/>
-                </Row>
+                {/*<h3 className="banner-h3">Chcesz zostać poinformowany, gdy nie będzie już w Polsce wolnych sądów?</h3>*/}
+                {/*<Row center="xs" middle="xs">*/}
+                    {/*<TextField hintText="Zostaw swój email"/>*/}
+                    {/*<FlatButton backgroundColor="#FFF"*/}
+                                {/*hoverColor="#ccc"*/}
+                                {/*className="banner-button extra-small-margin"*/}
+                                {/*onTouchTap={this.handleSubscribe}*/}
+                                {/*label="Dopisz się" primary={true}/>*/}
+                {/*</Row>*/}
 
                 <Row center="xs" middle="xs">
                     <h2 className="itallic">"Niniejsza inicjatywa jest inicjatywą wyłącznie obywatelską. Nie jest ona
