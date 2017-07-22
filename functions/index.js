@@ -3,17 +3,20 @@ const functions = require('firebase-functions');
 
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
-admin.initializeApp(functions.config().firebase);
+let firebaseConfig = functions.config().firebase;
+firebaseConfig.databaseAuthVariableOverride = {
+    uid: 'ThisIsRandomAdminUID7$ys*&a',
+};
+admin.initializeApp(firebaseConfig);
 
-var cors = require('cors');
-
-var corsOptions = {
+const cors = require('cors');
+const corsOptions = {
     origin: ['https://wolnesady.github.io', 'http://wolnesady.pl', 'http://wolnesądy.pl', 'http://chcemyweta.pl'],
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+};
+const corsFn = cors(corsOptions);
 
-var upvoteVetoFn = functions.https.onRequest((req, res) => {
-
+let upvoteVetoFn = functions.https.onRequest((req, res) => {
     let fingerPrintId;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer ')) {
         console.log('Found "Authorization" header');
@@ -22,21 +25,21 @@ var upvoteVetoFn = functions.https.onRequest((req, res) => {
 
         // Push the new message into the Realtime Database using the Firebase Admin SDK.
         let fingerprint_ref = admin.database().ref('/upvotes/fingerprints/' + fingerPrintId);
-        if (fingerprint_ref.exists()) {
-            fingerprint_ref.set({fingerPrintId}).then(snapshot => {
-                res.status(200).send({status: "Głos dodany"});
-            });
-        } else {
-            res.status(200).send({status: "Możesz zagłosować tylko raz."});
-        }
-
+        fingerprint_ref.once("value").then(snapshot => {
+            if (snapshot.exists()) {
+                res.status(200).send({status: "Możesz zagłosować tylko raz."});
+            } else {
+                fingerprint_ref.set({fingerPrintId}).then(snapshot => {
+                    res.status(200).send({status: "Głos dodany"});
+                });
+            }
+        });
     } else {
         res.status(403).send('Unauthorized');
     }
 });
 
 exports.upvoteVeto = functions.https.onRequest((req, res) => {
-    var corsFn = cors(corsOptions);
     corsFn(req, res, function () {
         upvoteVetoFn(req, res);
     });
