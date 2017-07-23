@@ -46,6 +46,6 @@ if [ "$target" = "production" ]; then
   DEPLOY "wolnesady.pl" "git@github.com-WolneSady:WolneSady/wolne_sady_landing.git" "http://wolnesady.pl"
 fi
 if [ "$target" = "preview" ]; then
-  DEPLOY "preview.wolnesądy.pl" "git@github.com-WolneSady/wolne_sady_preview.git" "http://preview.wolnesądy.pl/"
+  DEPLOY "wolnesady.github.io" "git@github.com-WolneSady:WolneSady/wolne_sady_preview.git" "http://wolnesady.github.io/wolne_sady_preview"
 fi
 echo "Target invalid, add argument 'production' or 'preview'"

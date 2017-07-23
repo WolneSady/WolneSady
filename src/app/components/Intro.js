@@ -40,6 +40,9 @@ class Intro extends Component {
                                        height: '100%',
                                        lineHeight: '90%'
                                    }}
+                                   buttonStyle={{
+                                       padding: '16px'
+                                   }}
                                    labelStyle={{
                                        margin: '8px',
                                        fontSize: '36px'

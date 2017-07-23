@@ -45,7 +45,7 @@ div#intro {
 }
 
 .banner-main-apla {
-    padding: 16px;
+    padding: 16px 32px;
     background-color: rgba(44, 45, 45, 0.5);
     line-height: 36px;
     height: auto;
@@ -80,6 +80,7 @@ div#intro {
 
 .banner-h2 {
     font-size: 28px !important;
+    font-weight: normal;
     color: white;
     margin: 8px;
     text-align: center;
@@ -148,4 +149,25 @@ img.bg {
 
 #share-section {
     margin-bottom: 16px;
+}
+
+#letter-section {
+    text-align: left;
+    line-height: normal;
+    margin: 16px auto;
+    padding: 32px;
+    width: 80%;
+}
+
+.no-side-margin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.letter-text-intro {
+    font-size: larger;
+}
+
+.letter-text-title {
+    font-size: large;
 }

@@ -12,7 +12,7 @@ class ShareSection extends Component {
     render() {
         return (
             <div id="share-section">
-                <h2 className="banner-h2">Udostępnij innym!</h2>
+                <span className="banner-h2">Udostępnij innym!</span>
                 <Row center="xs" middle="xs"
                      className="a2a_kit a2a_kit_size_32 a2a_default_style a2a_target share-this">
                     <a className="a2a_button_facebook"/>

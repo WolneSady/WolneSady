@@ -51,7 +51,7 @@ class CountSection extends Component {
                     </h2>
                     <FontIcon className="fa fa-users icon-padding banner-count"/>
                 </Row>
-                <h2 className="banner-h2">Tyle głosów domaga się WETA Prezydenta!</h2>
+                <span className="banner-h2">Tyle głosów domaga się WETA Prezydenta!</span>
             </div>
         }
 

@@ -4,13 +4,16 @@ import {Row} from "react-flexbox-grid";
 import CountSection from "./CountSection";
 import VoteSection from "./VoteSection";
 import ShareSection from "./ShareSection";
+import { FadeIn } from "animate-components";
 
 class StillOk extends Component {
 
     render() {
         return (
             <div>
-                <VoteSection id="vote_section"/>
+                <FadeIn duration="2s" timingFunction="ease-out">
+                    <VoteSection id="vote_section"/>
+                </FadeIn>
                 <CountSection id="count_section"/>
 
                 {/*<h3 className="banner-h3">Chcesz zostać poinformowany, gdy nie będzie już w Polsce wolnych sądów?</h3>*/}
