@@ -90,7 +90,7 @@ class VoteSection extends Component {
         } else if (this.state.showUpvote) {
             voteSection =
                 <Row center="xs">
-                    <h1 className="banner-h1">Chcesz oddać głos poparcia dla weto Prezydenta?</h1>
+                    <h1 className="banner-h1">Chcesz oddać głos poparcia dla weta Prezydenta?</h1>
                     {/*<h2 className="banner-h2">Wyślij mail do Kancelarii Prezydenta</h2>*/}
                     <RaisedButton className="banner-button"
                                   onTouchTap={this.handleUpvote}
@@ -113,6 +113,22 @@ class VoteSection extends Component {
                 <Col xs={12}>
                     <h3>{this.state.showMessage}</h3>
                 </Col>
+                <h2 className="banner-h2">Chcesz zrobić więcej?<br/>Wyślij mail do Kancelarii Prezydenta</h2>
+                <RaisedButton className="banner-button"
+                              onTouchTap={this.sendLetter}
+                              style={{
+                                  height: '100%',
+                                  lineHeight: '90%',
+                              }}
+                              buttonStyle={{
+                                  padding: '8px 16px'
+                              }}
+                              labelStyle={{
+                                  padding: '8px',
+                                  fontSize: '44px'
+                              }}
+                              label="WYŚLIJ MAIL"
+                              primary={true}/>
             </Row>
         }
 
