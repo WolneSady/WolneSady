@@ -300,12 +300,13 @@ class LetterSection extends Component {
                     </Col>
                     <Col xs={6} sm={1}>
                         <br/><br/>
-                        <CopyToClipboard text={this.state.body}>
+                        <CopyToClipboard text={this.state.body.replace(/<br\/>/g, "\n")}>
                             <RaisedButton label="Skopiuj"
                                           secondary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
+                <br/><br/>
                 <RaisedButton
                     label="Zamknij"
                     primary={true}
