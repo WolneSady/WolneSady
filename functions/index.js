@@ -27,10 +27,10 @@ let upvoteVetoFn = functions.https.onRequest((req, res) => {
         let fingerprint_ref = admin.database().ref('/upvotes/fingerprints/' + fingerPrintId);
         fingerprint_ref.once("value").then(snapshot => {
             if (snapshot.exists()) {
-                res.status(200).send({status: "Możesz zagłosować tylko raz."});
+                res.status(200).send({status: "Już wcześniej policzyliśmy twój głos."});
             } else {
                 fingerprint_ref.set({fingerPrintId}).then(snapshot => {
-                    res.status(200).send({status: "Głos dodany"});
+                    res.status(200).send({status: "Głos dodany."});
                 });
             }
         });
