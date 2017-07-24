@@ -50,7 +50,7 @@ class Intro extends Component {
                                    onTouchTap={this.handleEstimateTap}
                                    label="SPRAWDŹ" primary={true}/>
         } else {
-            answer = <h1 className="call-quote">JESZCZE TAK!</h1>
+            answer = <h1 className="call-quote">JESZCZE TAK, Prezydent zawetuje ustawy o KRS i Sądzie Najwyższym!</h1>
         }
 
         let info;

@@ -70,7 +70,7 @@ class VoteSection extends Component {
             });
         });
 
-        this.sendLetter();
+        // this.sendLetter();
     };
 
 
@@ -90,8 +90,8 @@ class VoteSection extends Component {
         } else if (this.state.showUpvote) {
             voteSection =
                 <Row center="xs">
-                    <h1 className="banner-h1">Chcesz, żeby Prezydent zawetował ustawy?</h1>
-                    <h2 className="banner-h2">Wyślij mail do Kancelarii Prezydenta</h2>
+                    <h1 className="banner-h1">Chcesz oddać głos poparcia dla weto Prezydenta?</h1>
+                    {/*<h2 className="banner-h2">Wyślij mail do Kancelarii Prezydenta</h2>*/}
                     <RaisedButton className="banner-button"
                                   onTouchTap={this.handleUpvote}
                                   style={{
@@ -105,7 +105,7 @@ class VoteSection extends Component {
                                       padding: '8px',
                                       fontSize: '44px'
                                   }}
-                                  label="ODDAJ GŁOS, WYŚLIJ MAIL"
+                                  label="TAK, CHCĘ WETA"
                                   primary={true}/>
                 </Row>
         } else {
