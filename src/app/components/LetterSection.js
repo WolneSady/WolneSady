@@ -272,7 +272,7 @@ class LetterSection extends Component {
                         <br/><br/>
                         <CopyToClipboard text={RECEIPENTS.join(" ")}>
                             <RaisedButton label="Skopiuj"
-                                          secondary={true}/>
+                                          primary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
@@ -287,7 +287,7 @@ class LetterSection extends Component {
                         <br/><br/>
                         <CopyToClipboard text={this.state.title}>
                             <RaisedButton label="Skopiuj"
-                                          secondary={true}/>
+                                          primary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
@@ -302,7 +302,7 @@ class LetterSection extends Component {
                         <br/><br/>
                         <CopyToClipboard text={this.state.body.replace(/<br\/>/g, "\n")}>
                             <RaisedButton label="Skopiuj"
-                                          secondary={true}/>
+                                          primary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
