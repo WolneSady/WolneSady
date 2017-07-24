@@ -56,12 +56,12 @@ const RECEIPENTS = [
 
 const ARGUMENTS = {
     arg1: "Jestem wdzięczny za weta Prezydenta ustaw dot. KRS oraz Sądu Najwyższego.",
-    arg2: "Oczekuję, że Prezydent RP zawetuje \"nowelizacje\" ustaw dot. ustroju sądów powszechnych.",
+    arg2: "Oczekuję, że Prezydent RP zawetuje nowelizację ustawy o ustroju sądów powszechnych.",
     arg3: "Nie chcę aby jakakolwiek partia - nawet ta, którą popieram - miała poprzez Ministra Sprawiedliwości wpływ na sądy powszechne.",
     arg4: "Boję się o przyszłość moją, mojej rodziny, przyjaciół i kraju, ponieważ moje prawa i wolności będą zagrożone przy wejściu w życie ww. ustawy.",
     arg5: "Weto byłoby sukcesem Prezydenta i ruch ten docenią wszyscy Polacy niezależnie od poglądów politycznych.",
     arg6: "Jednocześnie opowiadam się za dobrze przygotowaną reformą sądownictwa, która nie zagraża prawom obywateli, którą to reformę mógłby podjąć Prezydent Duda.",
-    arg7: "Obiecuję obywatelski opór i walkę o naszą wolność jeżeli Prezydent podpisze ten projekt lub skieruje go do uzależnionego od rządzącej partii Trybunału Konstytucyjnego.",
+    arg7: "Obiecuję obywatelski opór i walkę o naszą wolność jeżeli Prezydent podpisze projekt ustawy o ustroju sądów powszechnych lub skieruje go do uzależnionego od rządzącej partii Trybunału Konstytucyjnego.",
 };
 
 const TITLES = [
