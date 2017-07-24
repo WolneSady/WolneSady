@@ -4,6 +4,7 @@ import {CircularProgress, RaisedButton} from "material-ui";
 import {Col, Row} from "react-flexbox-grid";
 import Fingerprint2 from 'fingerprintjs2';
 import * as $ from "jquery";
+import * as ReactGA from "react-ga";
 
 class VoteSection extends Component {
     constructor(props, context) {
@@ -38,6 +39,11 @@ class VoteSection extends Component {
     }
 
     handleUpvote = () => {
+        ReactGA.event({
+            category: 'action',
+            action: 'Upvote Veto'
+        });
+
         this.setState({showVoteLoader: true});
 
         var self = this;
@@ -78,7 +84,7 @@ class VoteSection extends Component {
         } else if (this.state.showUpvote) {
             voteSection =
                 <Row center="xs">
-                    <h1 className="banner-h1">Chcesz oddać głos poparcia dla weta Prezydenta?</h1>
+                    <h1 className="banner-h1">Czy chcesz aby Prezydent zawetował też ustawę o ustroju sądów powszechnych?</h1>
                     {/*<h2 className="banner-h2">Wyślij mail do Kancelarii Prezydenta</h2>*/}
                     <RaisedButton className="banner-button"
                                   onTouchTap={this.handleUpvote}

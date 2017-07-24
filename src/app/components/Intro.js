@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {Row, Col} from 'react-flexbox-grid';
 import StillOk from "./StillOk";
 import CircularProgress from 'material-ui/CircularProgress';
+import * as ReactGA from "react-ga";
 
 
 class Intro extends Component {
@@ -19,6 +20,10 @@ class Intro extends Component {
 
     handleEstimateTap = () => {
         this.setState({showLoader: true});
+        ReactGA.event({
+            category: 'action',
+            action: 'Check Are Courts independent'
+        });
 
         setTimeout(function () {
             this.setState({

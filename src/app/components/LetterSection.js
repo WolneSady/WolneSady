@@ -6,6 +6,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {Col, Row} from "react-flexbox-grid";
 import {grey100, grey400, grey500, indigo500, indigo700, orangeA200} from "material-ui/styles/colors";
 import CopyToClipboard from 'react-copy-to-clipboard';
+import * as ReactGA from "react-ga";
 
 const customTheme = getMuiTheme(lightBaseTheme, {
     palette: {
@@ -88,6 +89,10 @@ class LetterSection extends Component {
         };
     }
 
+    componentDidMount(){
+        ReactGA.pageview("LetterPage");
+    }
+
     handleInputChange = (event, newValue) => {
         const name = event.target.name;
 
@@ -97,6 +102,11 @@ class LetterSection extends Component {
     };
 
     handleSubmit = (e) => {
+        ReactGA.event({
+            category: 'action',
+            action: 'Send email'
+        });
+
         e.preventDefault();
         var self = this;
 

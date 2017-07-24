@@ -8,6 +8,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {grey100, grey400, grey500, orangeA200, indigo700, indigo500, white} from "material-ui/styles/colors";
 import Intro from "./components/Intro";
+import * as ReactGA from "react-ga";
 
 const customTheme = getMuiTheme(darkBaseTheme, {
     palette: {
@@ -24,6 +25,10 @@ const customTheme = getMuiTheme(darkBaseTheme, {
 class Main extends Component {
     constructor(props, context) {
         super(props, context);
+    }
+
+    componentDidMount(){
+        ReactGA.pageview("MainPage");
     }
 
     render() {

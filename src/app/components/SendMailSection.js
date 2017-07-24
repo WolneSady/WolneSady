@@ -4,6 +4,7 @@ import {ModalContainer, ModalDialog} from "react-modal-dialog";
 import LetterSection from "./LetterSection";
 import {RaisedButton} from "material-ui";
 import {Row} from "react-flexbox-grid";
+import * as ReactGA from "react-ga";
 
 class SendMailSection extends Component {
     constructor(props, context) {
@@ -15,6 +16,7 @@ class SendMailSection extends Component {
     }
 
     sendLetter = () => {
+        ReactGA.modalview("Configure mail");
         this.setState({isShowingModal: true});
     };
 
