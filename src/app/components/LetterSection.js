@@ -257,7 +257,7 @@ class LetterSection extends Component {
                     wartości.</h1>
                 <Row top="xs" className="no-side-margin">
 
-                    <Col xs>
+                    <Col xs={6} sm className="ellipsize-text">
                         <b className="letter-text-title">Odbiorcy</b>
                         <br/>
                         <span>
@@ -268,41 +268,41 @@ class LetterSection extends Component {
                             }
                         </span>
                     </Col>
-                    <Col>
+                    <Col xs={6} sm={1}>
                         <br/><br/>
                         <CopyToClipboard text={RECEIPENTS.join(" ")}>
                             <RaisedButton label="Skopiuj"
-                                          primary={true}/>
+                                          secondary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
                 <br/><br/>
                 <Row top="xs" className="no-side-margin">
-                    <Col xs>
+                    <Col xs={6} sm>
                         <b className="letter-text-title">Tytuł</b>
                         <br/>
                         <span>{this.state.title}</span>
                     </Col>
-                    <Col>
+                    <Col xs={6} sm={1}>
                         <br/><br/>
                         <CopyToClipboard text={this.state.title}>
                             <RaisedButton label="Skopiuj"
-                                          primary={true}/>
+                                          secondary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>
                 <br/><br/>
                 <Row top="xs" className="no-side-margin">
-                    <Col xs>
+                    <Col xs={6} sm>
                         <b className="letter-text-title">Treść</b>
                         <br/>
                         <span><div dangerouslySetInnerHTML={{__html: this.state.body}}/></span>
                     </Col>
-                    <Col>
+                    <Col xs={6} sm={1}>
                         <br/><br/>
                         <CopyToClipboard text={this.state.body}>
                             <RaisedButton label="Skopiuj"
-                                          primary={true}/>
+                                          secondary={true}/>
                         </CopyToClipboard>
                     </Col>
                 </Row>

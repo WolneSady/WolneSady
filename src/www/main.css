@@ -171,3 +171,8 @@ img.bg {
 .letter-text-title {
     font-size: large;
 }
+
+.ellipsize-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
